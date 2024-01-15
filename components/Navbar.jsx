@@ -94,7 +94,7 @@ const Navbar = () => {
           <li className="w-[160px] h-[60px] px-4 flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#6fc2b0]">
             <Link
               className="flex justify-between items-center w-full text-gray-300"
-              href="mailto:schairez2@ucmerced.edu"
+              href="mailto:sergio@artrid.net"
             >
               Email
               <Mail size={30} />

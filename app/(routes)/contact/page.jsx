@@ -11,7 +11,7 @@ const Contact = () => {
     email: "",
     message: "",
   });
-  const[isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
   const [submissionStatus, setSubmissionStatus] = useState(null);
 
   const handleChange = (e) => {
@@ -28,7 +28,7 @@ const Contact = () => {
       setIsLoading(false);
       setSubmissionStatus("Success!");
     } catch (e) {
-      console.log(e.res.data.error);
+      console.log(e);
       setIsLoading(false);
       setSubmissionStatus("Error!");
     }
@@ -98,7 +98,12 @@ const Contact = () => {
           disabled={isLoading}
         >
           {isLoading ? (
-            <MoreHorizontal color="#ffffff" height={20} width={20} timeout={30000} />
+            <MoreHorizontal
+              color="#ffffff"
+              height={20}
+              width={20}
+              timeout={30000}
+            />
           ) : (
             "Lets Collaborate"
           )}
