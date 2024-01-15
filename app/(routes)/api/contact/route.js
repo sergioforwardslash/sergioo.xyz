@@ -31,16 +31,16 @@ export const POST = async (req, res) => {
       subject: `Sergioo.xyz | Thank you for your message ${name}`,
       text: `Thank you for your message ${name}! I will get back to you as soon as possible.`,
     };
-    transporter.sendMail(mailOptions, function (err, data) {
-      if (err) {
-        console.error(err);
+    transporter.sendMail(mailOptions, function (error, info) {
+      if (error) {
+        console.log("[SEND_MAIL_ERROR]", error);
         return new NextResponse("Error sending email", { status: 500 });
       } else {
-        console.log("Email sent!");
+        console.log("Email sent!" + info.response);
       }
     });
   } catch (error) {
-    console.error(error);
+    console.log("[SEND_MAIL_ERROR]", error);
     return new NextResponse("Error sending email", { status: 500 });
   }
 
@@ -52,9 +52,10 @@ export const POST = async (req, res) => {
       text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`,
     });
 
+    console.log("[SEND_MAIL_SUCCESS]");
     return new NextResponse("Email sent", { status: 200 });
   } catch (error) {
-    console.error(error);
+    console.log("[SEND_MAIL_ERROR]", error);
     return new NextResponse("Error sending email", { status: 500 });
   }
 };
