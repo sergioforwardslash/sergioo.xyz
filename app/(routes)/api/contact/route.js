@@ -26,7 +26,7 @@ export const POST = async (req, res) => {
 
   try {
     const mailOptions = {
-      from: "sergio@artrid.net",
+      from: process.env.GMAIL_EMAIL,
       to: email,
       subject: `Sergioo.xyz | Thank you for your message ${name}`,
       text: `Thank you for your message ${name}! I will get back to you as soon as possible.`,
@@ -45,7 +45,7 @@ export const POST = async (req, res) => {
   }
 
   try {
-    transporter.sendMail({
+    let info = await transporter.sendMail({
       from: `"${name}" <${email}>`,
       to: process.env.GMAIL_EMAIL,
       subject: `Sergioo.xyz | New Message from ${name}`,
