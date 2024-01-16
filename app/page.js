@@ -1,4 +1,5 @@
 import { ArrowRight } from "lucide-react";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -17,14 +18,14 @@ export default function Home() {
           building responsive full-stack web applications.
         </p>
         <div style={{ display: "inline-block" }}>
-          <a href="/skills" style={{ display: "inline-block" }}>
+          <Link href="/work" style={{ display: "inline-block" }}>
             <button className="text-white group border-2 px-6 py-3 my-2 flex items-center hover:bg-[#cb6ce6] hover:border-[#cb6ce6]">
-              View Skills
+              View Work
               <span>
                 <ArrowRight className="ml-3 " />
               </span>
             </button>
-          </a>
+          </Link>
         </div>
       </div>
     </div>

@@ -12,7 +12,7 @@ const Navbar = () => {
   return (
     <div className="fixed w-full h-[80px] flex justify-between items-center px-4 bg-[#0a192f] text-gray-300">
       <div>
-        <Image src='/logos/logo1.png' alt="logo" width={100} height={100} />
+        <Image src="/logos/logo1.png" alt="logo" width={100} height={100} />
       </div>
 
       <ul className="hidden md:flex gap-5">
@@ -25,9 +25,9 @@ const Navbar = () => {
         <li>
           <Link href="/skills">Skills</Link>
         </li>
-        {/* <li>
-          <a href="/work">Work</a>
-        </li> */}
+        <li>
+          <Link href="/work">Work</Link>
+        </li>
         <li>
           <Link href="/contact">Contact</Link>
         </li>
@@ -59,11 +59,11 @@ const Navbar = () => {
             Skills
           </Link>
         </li>
-        {/* <li className="py-6 text-4xl">
-          <a href="/work" onClick={handleClick}>
+        <li className="py-6 text-4xl">
+          <Link href="/work" onClick={handleClick}>
             Work
-          </a>
-        </li> */}
+          </Link>
+        </li>
         <li className="py-6 text-4xl">
           <Link href="/contact" onClick={handleClick}>
             Contact
