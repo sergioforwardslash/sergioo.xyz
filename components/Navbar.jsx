@@ -104,7 +104,7 @@ const Navbar = () => {
             <Link
               className="flex justify-between items-center w-full text-gray-300"
               target="_blank"
-              href="https://drive.google.com/file/d/1IJauF-JCy8y7Xry6RHZb95YdhTn_07R8/view?usp=sharing"
+              href="https://drive.google.com/file/d/1IoG2KLUbxvbMw6ZYY5LSwm-9B-cBCx-7/view?usp=drive_link"
             >
               Resume <ScrollText size={30} />
             </Link>

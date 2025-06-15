@@ -27,10 +27,10 @@ const projects = [
   },
   {
     id: 4,
-    title: "Health Pair",
-    description: "A chiropractic staffing agency",
-    image: "/work/healthpair.png",
-    link: "https://healthpair.io",
+    title: "ilmgf.com",
+    description: "Online relationship diary for partner appreciation",
+    image: "/work/ilmgf.png",
+    link: "https://ilmgf.com",
   },
   {
     id: 5,
@@ -81,6 +81,7 @@ const Work = () => {
                 <p className="text-indigo-500 mt-2">{project.description}</p>
                 <Link
                   href={project.link}
+                  target="_blank"
                   className="inline-flex items-center mt-4 text-indigo-400 hover:text-indigo-500 transition-colors duration-300"
                 >
                   Visit site <ArrowUpRight size={24} />
